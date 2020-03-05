@@ -32,6 +32,10 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('news/create','Admin\NewsController@add')->middleware('auth');
     Route::get('profile/create','Admin\ProfileController@add');
     Route::get('profile/edit','Admin\ProfileController@edit');
+    // PHP/Laravel 12 　課題2
+    Route::get('profile/create','Admin\ProfileController@add')->middleware('auth');
+    // PHP/Laravel 12 　課題3
+    Route::get('profile/edit','Admin\ProfileController@edit')->middleware('auth');
 });
 Auth::routes();
 
